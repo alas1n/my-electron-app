@@ -1,13 +1,16 @@
 {
   "name": "my-electron-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "fist electron app",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "win": "electron-packager out appname --platform=win32 --arch=x64",
+    "pack": "build --dir",
+    "dist": "build"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +24,8 @@
     "electron": "^11.0.3"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "rpmbuild": "0.0.23"
   },
   "config": {
     "forge": {
